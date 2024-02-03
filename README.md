@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Ryanretro
 - 👀 I’m interested in Graphics and Design
-- 💞️ I’m looking to collaborate on Graphics and Design (CGI)
+- 💞️ I’m looking to collaborate on Graphics Design (CGI) and Software Development
 - 📫 How to reach me @retrosoft.inc@gmail.com
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: Who knew a cup of tea can also be a cup of water.
