@@ -1,5 +1,5 @@
-- 👋 Hi, I’m @Ryanretro
-- 👀 I’m interested in Graphics and Design
+- 👋 Hi, I’m @Ryan Moshi
+- 👀 I’m interested in Graphics Design and Software Development
 - 💞️ I’m looking to collaborate on Graphics Design (CGI) and Software Development
 - 📫 How to reach me @retrosoft.inc@gmail.com
 - 😄 Pronouns: He/Him
