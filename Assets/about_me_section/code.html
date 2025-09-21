@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ryan Moshi - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#068cf9",
+              "background-light": "#f5f7f8",
+              "background-dark": "#0f1a23",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<style>
+      .timeline-item:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        left: 1.125rem;
+        top: 2rem;
+        bottom: -2rem;
+        width: 2px;
+        background-color: #e5e7eb;
+      }
+      .dark .timeline-item:not(:last-child)::before {
+        background-color: #374151;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="min-h-screen flex flex-col">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">Ryan Moshi</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden md:block w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCjsQow-Kj1eDIWxLtBuaIeA0QwcanmKFDaLQI2gZumzJTGpq60wB0NEXGT0hkyjPGyXBTxgRyCW6MAZan3JXYThZRsplZ5hpl1DrFYcKoSWqdTlSvpumS7MzUQbbQmqI9cwBDLFZUTN9IjGobkC-uXR-g5dRJyVOp6cdMa0Oph1tDVHg8w5_QiVjJ2VEVT53zE67xLa40qBU8Zo2kEZHqAr9Ywn3BjkACUxOvkbwsJMmOgl36aUW8s9MXWu3QEkrmbyO5BSVKjYrA");'></div>
+<button class="md:hidden p-2 rounded-lg bg-gray-200/50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-200">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="max-w-4xl mx-auto">
+<section class="text-center mb-16">
+<div class="w-32 h-32 rounded-full mx-auto mb-6 bg-cover bg-center ring-4 ring-primary/20" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvxw9uvA6a5HtDs1kpSWy8cdQCji-5PeKa9VGYv2xvjV7w_SZC-w_sOnW9MyIhjpAbzJqq6VyQvk1NeKbcOAS90U77n3YdrwTPHqAaLjaE91PHbbQOuKVvL342O801x0FiR3XpAEZG4K5L0J5CWPCpG6cIUJOmoMzxFMyr8BA-v5NbMj_uFLoNajt2e0aABroZIu4d_xW86LoHNVwfUJ0kWmUazVtK8__EdeRhWn17nLYHhzSqaRCK1Ujo7SXLcig6qX_VjHUl4Tg");'></div>
+<h2 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-2">Ryan Moshi</h2>
+<p class="text-xl text-primary font-medium">Brand Strategist &amp; Chief Technologist</p>
+<p class="mt-4 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+              A seasoned brand strategist and chief technologist with over 15 years of experience. I thrive on helping businesses leverage technology to achieve their goals and create meaningful connections with their customers.
+            </p>
+</section>
+<div class="grid md:grid-cols-2 gap-x-12 gap-y-16">
+<div>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">Education</h3>
+<div class="relative flex flex-col gap-8">
+<div class="relative pl-10 timeline-item">
+<div class="absolute left-0 top-0 flex items-center justify-center w-9 h-9 rounded-full bg-background-light dark:bg-background-dark border-2 border-gray-300 dark:border-gray-600">
+<img alt="Stanford University logo" class="w-5 h-5 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkTTaGonDANfm4nbwtzM_vT9NRviENgeBQxTyydWJcb4cZND1_r8c_egp8xchfQhq5p3Hwt4K94Bs7YIcuytT0n0iiM0KqNIQwbvS2cBWoiaBby-fBvRZ1zQu1K9dU06qoNDuluIUV5tIr9ZGwe6QGh7H202Lqg9Kg6DoEZlxwNwK5EwqaIyFlIFbnDNqefZqBqXgG5FnYCtNWOi_mL1IlXNUMXuNhQKb7_rB1E8171Gs3KdFaQge5sMMFlvyMHrvpCXzaWk5LmGM"/>
+</div>
+<h4 class="font-semibold text-gray-800 dark:text-gray-100">Master of Business Administration</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">Stanford University, 2012</p>
+</div>
+<div class="relative pl-10 timeline-item">
+<div class="absolute left-0 top-0 flex items-center justify-center w-9 h-9 rounded-full bg-background-light dark:bg-background-dark border-2 border-gray-300 dark:border-gray-600">
+<img alt="UC Berkeley logo" class="w-5 h-5 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIfGuHDaoWcqg6XKjX9HOH_2T30qoV5aaN-pz3xWO-weCgCRGO8_Y33J8O2cHe_CT52RaX5W9FtK3yqdbiw-nnCuVjcQxM_IS4XPUTeIS53cgIoNWpXSE4O4pN2_5-R9rKEh30t3u17ve4AAXot6O2rRypqCe0zlJAiJt4RL9QaBAY9RpdXMkWurxKfA_7G9SCTW8UocUukSmNNDHQvC88WBwA1szvtDTTHnwr2wzi9AjQlwlj5k89SiEoV14CYH4e6hnjIQ-rq84"/>
+</div>
+<h4 class="font-semibold text-gray-800 dark:text-gray-100">Bachelor of Science in Computer Science</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">University of California, Berkeley, 2010</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">Experience</h3>
+<div class="relative flex flex-col gap-8">
+<div class="relative pl-10 timeline-item">
+<div class="absolute left-0 top-0 flex items-center justify-center w-9 h-9 rounded-full bg-background-light dark:bg-background-dark border-2 border-gray-300 dark:border-gray-600">
+<img alt="Tech Solutions Inc. logo" class="w-5 h-5 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3W9yQmLcjlVdPFGAiz3lIJTmywPPNwiQQC3VizqSVF9rfrLCsHOUoS24wjAgKSqATZp1S35R8uRS3c0nIgYh868-64zdCjSNzPvZOnK0KPfO9l7aLyDsGVlqmsuWWF_jKLgLIBi3rykBaFjb5THWv7miSpTnqBw0WlBBhNWaA-7BnrcZlnxzyX-ebCRq1C-umkomIqW1nXKbi4kEGwH6jn_oQOHUG0a9TSWMzUxvhR-yyEo_bMEO7HM_BSQkKJXslQz7kebDwWqs"/>
+</div>
+<h4 class="font-semibold text-gray-800 dark:text-gray-100">Chief Technologist</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">Tech Solutions Inc., 2018 - Present</p>
+</div>
+<div class="relative pl-10 timeline-item">
+<div class="absolute left-0 top-0 flex items-center justify-center w-9 h-9 rounded-full bg-background-light dark:bg-background-dark border-2 border-gray-300 dark:border-gray-600">
+<img alt="Global Marketing Group logo" class="w-5 h-5 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCStm-1GYG2fRDa670pcvUQz2sOIkn6MgaP1na8us-2s4Tl6-cN0FnJGwZxSQx6uD5RREgkQ0Q2ve5FQ4nVWqXHR1YJyQa4MOnZ0X63PZjU_KXAjuUw_N4_eyZdu_S49rG4lI3ZXGRDnUdJLYMa-O2vmJNFpT0rzNAQNBQDgOpGN1Cbm1m8JoTtFyLYVTHemVPDZ2nPmfBl4g0yp5yGg0Dw0BSTMKt7rjAKo0MRgy7CyibHGC65garFZVqKdYo9i1tyQYnrmSZ00mA"/>
+</div>
+<h4 class="font-semibold text-gray-800 dark:text-gray-100">Senior Brand Strategist</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">Global Marketing Group, 2015 - 2018</p>
+</div>
+<div class="relative pl-10 timeline-item">
+<div class="absolute left-0 top-0 flex items-center justify-center w-9 h-9 rounded-full bg-background-light dark:bg-background-dark border-2 border-gray-300 dark:border-gray-600">
+<img alt="Innovative Brands LLC logo" class="w-5 h-5 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwYz2Ms16WAEnNa042grrZLXP4b0QV5ewOSRqfMK85KPdj_KEZwM0g8iilJ_enM5glPzfpfIW_cknDSyO0Gr4vCX3soXpIw0WorgQn21SqieZCqXUEUgAiHROdt70T9AenwdxMIFxeFk_DLOSKqRmv20ccyxky7mS1WQce5wJ-sQH6xHC4QfiaNzZvbyWF-9YWD6AWiVOgLAR0erF8aUFXWpKNHOmP-4FWgO4niSrZcq4_u76ikv-5SmvoJ25rVj-ntGutoKjtWYI"/>
+</div>
+<h4 class="font-semibold text-gray-800 dark:text-gray-100">Brand Strategist</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">Innovative Brands LLC, 2012 - 2015</p>
+</div>
+</div>
+</div>
+</div>
+<section class="mt-24 bg-gray-100/50 dark:bg-gray-800/20 p-8 rounded-xl">
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-4">What Drives Me</h3>
+<p class="text-center max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
+              I am driven by a desire to create innovative solutions that solve real-world problems. I believe that technology has the power to transform businesses and improve people's lives, and I am committed to using my skills and experience to make a positive impact. I am also passionate about learning and staying up-to-date with the latest trends in technology and marketing. I am always looking for new ways to improve my skills and knowledge, and I am eager to share my expertise with others.
+            </p>
+</section>
+</div>
+</main>
+</div>
+
+</body></html>

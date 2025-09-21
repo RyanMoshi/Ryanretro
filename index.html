@@ -5,26 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan Moshi - Brand Strategist & Digital Innovation Expert</title>
-    <meta name="description" content="Ryan Moshi - Expert in brand strategy, digital transformation, and creative design. Delivering innovative solutions that drive business growth and enhance digital presence.">
-    <meta name="keywords" content="brand strategy, digital marketing, graphic design, web development, business technology, creative design">
+    <meta name="description" content="Professional brand strategist and digital innovation expert specializing in brand strategy, web design, digital marketing, and creative solutions. 50+ projects delivered with 100% client satisfaction.">
+    <meta name="keywords" content="brand strategy, digital marketing, web design, UI/UX, graphic design, digital innovation, brand consultant, creative designer, marketing strategist, SEO optimization, content creation">
     <meta name="author" content="Ryan Moshi">
+    <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Ryan Moshi - Brand Strategist & Digital Innovation Expert">
-    <meta property="og:description" content="Expert in brand strategy, digital transformation, and creative design. Delivering innovative solutions that drive business growth.">
-    <meta property="og:type" content="website">
+    <meta property="og:description" content="Professional brand strategist and digital innovation expert specializing in brand strategy, web design, digital marketing, and creative solutions.">
+    <meta property="og:image" content="Assets/ryan profile white.jpg">
     <meta property="og:url" content="https://ryanmoshi.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ryan Moshi Portfolio">
     
-    <link rel="stylesheet" href="style.css">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ryan Moshi - Brand Strategist & Digital Innovation Expert">
+    <meta name="twitter:description" content="Professional brand strategist and digital innovation expert specializing in brand strategy, web design, digital marketing, and creative solutions.">
+    <meta name="twitter:image" content="Assets/ryan profile white.jpg">
+    
+    <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!--Box Icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="Assets/retrosoft black svg.svg">
+    <link rel="icon" type="image/svg+xml" href="Assets/retrosoft white svg.svg">
+    <link rel="apple-touch-icon" href="Assets/retrosoft white svg.svg">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
@@ -44,6 +61,9 @@
             <a href="#contact">Contact</a>
             <span class="active-nav"></span>
         </nav>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <i class='bx bx-sun' id="theme-icon"></i>
+        </button>
     </header>
     <!---Hero Section Design--->
     <section class="home" id="home">
@@ -54,19 +74,19 @@
                 <p class="hero-description">I help businesses transform their digital presence through strategic branding, innovative design, and technology solutions that deliver measurable results.</p>
                 
                 <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">50+</span>
+                    <div class="stat animate-fadeInUp" data-delay="0.2s">
+                        <span class="stat-number" data-count="50">0</span>
                         <span class="stat-label">Projects Delivered</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">3+</span>
+                    <div class="stat animate-fadeInUp" data-delay="0.4s">
+                        <span class="stat-number" data-count="3">0</span>
                         <span class="stat-label">Years Experience</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
+                    <div class="stat animate-fadeInUp" data-delay="0.6s">
+                        <span class="stat-number" data-count="100">0</span>
                         <span class="stat-label">Client Satisfaction</span>
                     </div>
-            </div>
+                </div>
                 
             <div class="btn-box">
                     <a href="#work" class="btn btn-primary">View My Work</a>
@@ -430,6 +450,152 @@
                     <i class='bx bx-message-dots'></i>
                     Start Your Project
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section class="tech-stack" id="tech-stack">
+        <div class="container">
+            <h2 class="heading">Technology <span>Stack</span></h2>
+            <p class="section-subtitle">Tools and technologies I use to bring ideas to life</p>
+            
+            <div class="tech-categories">
+                <!-- Design Tools -->
+                <div class="tech-category">
+                    <div class="category-header">
+                        <i class='bx bx-palette'></i>
+                        <h3>Design & Creative</h3>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item" data-tooltip="Adobe Creative Suite">
+                            <div class="tech-icon">
+                                <i class='bx bx-paint'></i>
+                            </div>
+                            <span class="tech-name">Adobe Suite</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Figma">
+                            <div class="tech-icon">
+                                <i class='bx bx-palette'></i>
+                            </div>
+                            <span class="tech-name">Figma</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Canva">
+                            <div class="tech-icon">
+                                <i class='bx bx-image'></i>
+                            </div>
+                            <span class="tech-name">Canva</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Sketch">
+                            <div class="tech-icon">
+                                <i class='bx bx-vector'></i>
+                            </div>
+                            <span class="tech-name">Sketch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development Tools -->
+                <div class="tech-category">
+                    <div class="category-header">
+                        <i class='bx bx-code-alt'></i>
+                        <h3>Development</h3>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item" data-tooltip="HTML5">
+                            <div class="tech-icon">
+                                <i class='bx bx-code'></i>
+                            </div>
+                            <span class="tech-name">HTML5</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="CSS3">
+                            <div class="tech-icon">
+                                <i class='bx bx-paint'></i>
+                            </div>
+                            <span class="tech-name">CSS3</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="JavaScript">
+                            <div class="tech-icon">
+                                <i class='bx bx-code-curly'></i>
+                            </div>
+                            <span class="tech-name">JavaScript</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="GitHub">
+                            <div class="tech-icon">
+                                <i class='bx bx-git-branch'></i>
+                            </div>
+                            <span class="tech-name">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics & SEO -->
+                <div class="tech-category">
+                    <div class="category-header">
+                        <i class='bx bx-trending-up'></i>
+                        <h3>Analytics & SEO</h3>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item" data-tooltip="Google Analytics">
+                            <div class="tech-icon">
+                                <i class='bx bx-bar-chart'></i>
+                            </div>
+                            <span class="tech-name">Google Analytics</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Google Search Console">
+                            <div class="tech-icon">
+                                <i class='bx bx-search'></i>
+                            </div>
+                            <span class="tech-name">Search Console</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="SEMrush">
+                            <div class="tech-icon">
+                                <i class='bx bx-target-lock'></i>
+                            </div>
+                            <span class="tech-name">SEMrush</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Social Media Insights">
+                            <div class="tech-icon">
+                                <i class='bx bx-share-alt'></i>
+                            </div>
+                            <span class="tech-name">Social Insights</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Tools -->
+                <div class="tech-category">
+                    <div class="category-header">
+                        <i class='bx bx-briefcase'></i>
+                        <h3>Business & Project Management</h3>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item" data-tooltip="Trello">
+                            <div class="tech-icon">
+                                <i class='bx bx-task'></i>
+                            </div>
+                            <span class="tech-name">Trello</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Asana">
+                            <div class="tech-icon">
+                                <i class='bx bx-check-square'></i>
+                            </div>
+                            <span class="tech-name">Asana</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Slack">
+                            <div class="tech-icon">
+                                <i class='bx bx-message'></i>
+                            </div>
+                            <span class="tech-name">Slack</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Zoom">
+                            <div class="tech-icon">
+                                <i class='bx bx-video'></i>
+                            </div>
+                            <span class="tech-name">Zoom</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

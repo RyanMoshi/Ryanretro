@@ -1,9 +1,60 @@
-// Modern Portfolio JavaScript
+// Modern Portfolio JavaScript with Enhanced Features
 
 // Initialize EmailJS
 (function() {
     emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
 })();
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const body = document.body;
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme') || 'light';
+body.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+    
+    // Add transition effect
+    body.style.transition = 'all 0.3s ease-in-out';
+    setTimeout(() => {
+        body.style.transition = '';
+    }, 300);
+});
+
+function updateThemeIcon(theme) {
+    if (theme === 'dark') {
+        themeIcon.className = 'bx bx-moon';
+    } else {
+        themeIcon.className = 'bx bx-sun';
+    }
+}
+
+// Enhanced Page Load Animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    
+    // Animate hero elements with delays
+    const heroElements = document.querySelectorAll('.hero-text > *');
+    heroElements.forEach((element, index) => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        
+        setTimeout(() => {
+            element.style.transition = 'all 0.8s ease-out';
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }, index * 200);
+    });
+});
 
 // Mobile Menu Toggle
 let menuIcon = document.querySelector('#menu-icon');
@@ -48,7 +99,7 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
-// Scroll Animations
+// Enhanced Scroll Animations with Intersection Observer
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -57,17 +108,65 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            const element = entry.target;
+            const delay = element.dataset.delay || '0s';
+            
+            setTimeout(() => {
+                element.classList.add('visible');
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, parseFloat(delay) * 1000);
         }
     });
 }, observerOptions);
 
 // Observe elements for scroll animations
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.project-card, .skill-category, .value-item, .contact-method, .service-card');
+    const animatedElements = document.querySelectorAll('.project-card, .skill-category, .value-item, .contact-method, .service-card, .tech-category, .stat');
+    
     animatedElements.forEach(el => {
-        el.classList.add('fade-in');
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.8s ease-out';
         observer.observe(el);
+    });
+});
+
+// Animated Counter for Stats
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    
+    const timer = setInterval(() => {
+        start += increment;
+        element.textContent = Math.floor(start);
+        
+        if (start >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        }
+    }, 16);
+}
+
+// Counter Animation Observer
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.dataset.count);
+            
+            if (!counter.classList.contains('animated')) {
+                counter.classList.add('animated');
+                animateCounter(counter, target);
+            }
+        }
+    });
+}, { threshold: 0.5 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.stat-number');
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
     });
 });
 
@@ -78,6 +177,8 @@ const skillObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const width = entry.target.style.width;
             entry.target.style.width = '0%';
+            entry.target.style.transition = 'width 1.5s ease-out';
+            
             setTimeout(() => {
                 entry.target.style.width = width;
             }, 200);
@@ -114,13 +215,13 @@ if (contactForm) {
                 project_type: formData.get('project-type'),
                 budget: formData.get('budget'),
                 message: formData.get('message'),
-                to_email: 'ryanmoshi@gmail.com' // Your email
+                to_email: 'ryanmoshi@gmail.com'
             };
             
             // Send email using EmailJS
             const response = await emailjs.send(
-                'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-                'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+                'YOUR_SERVICE_ID',
+                'YOUR_TEMPLATE_ID',
                 templateParams
             );
             
@@ -166,11 +267,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Notification System
+// Enhanced Notification System
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
-    notification.textContent = message;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="bx ${getNotificationIcon(type)}"></i>
+            <span>${message}</span>
+        </div>
+    `;
     
     // Style the notification
     notification.style.cssText = `
@@ -178,14 +284,15 @@ function showNotification(message, type = 'info') {
         top: 20px;
         right: 20px;
         padding: 1rem 1.5rem;
-        border-radius: 0.5rem;
+        border-radius: 0.75rem;
         color: white;
         font-weight: 500;
         z-index: 10000;
         transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        max-width: 300px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        max-width: 350px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
     `;
     
     // Set background color based on type
@@ -211,8 +318,18 @@ function showNotification(message, type = 'info') {
             if (document.body.contains(notification)) {
                 document.body.removeChild(notification);
             }
-        }, 300);
+        }, 400);
     }, 5000);
+}
+
+function getNotificationIcon(type) {
+    const icons = {
+        success: 'bx-check-circle',
+        error: 'bx-error-circle',
+        info: 'bx-info-circle',
+        warning: 'bx-error'
+    };
+    return icons[type] || icons.info;
 }
 
 // Smooth scroll for anchor links
@@ -241,7 +358,6 @@ document.querySelectorAll('.btn').forEach(btn => {
     
     btn.addEventListener('click', function(e) {
         if (this.type === 'submit') {
-            // Loading animation handled in form submission
             return;
         }
         
@@ -262,19 +378,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add hover effects to project cards
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-8px)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
-});
-
-// Service card interactions
-document.querySelectorAll('.service-card').forEach(card => {
+// Enhanced hover effects for cards
+document.querySelectorAll('.project-card, .service-card, .tech-category').forEach(card => {
     card.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-8px)';
     });
@@ -302,16 +407,15 @@ images.forEach(img => imageObserver.observe(img));
 // Add keyboard navigation support
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        // Close mobile menu on escape
-   menuIcon.classList.remove('bx-x');
-   navbar.classList.remove('active');
-}
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    }
 });
 
 // Add focus management for accessibility
-document.querySelectorAll('.btn, .project-link, .service-card').forEach(element => {
+document.querySelectorAll('.btn, .project-link, .service-card, .tech-item').forEach(element => {
     element.addEventListener('focus', function() {
-        this.style.outline = '2px solid #2563eb';
+        this.style.outline = '2px solid var(--primary-color)';
         this.style.outlineOffset = '2px';
     });
     
@@ -326,13 +430,13 @@ document.querySelectorAll('input, textarea, select').forEach(field => {
         if (this.hasAttribute('required') && !this.value.trim()) {
             this.style.borderColor = '#ef4444';
         } else {
-            this.style.borderColor = '#e5e7eb';
+            this.style.borderColor = 'var(--border-color)';
         }
     });
     
     field.addEventListener('input', function() {
         if (this.style.borderColor === 'rgb(239, 68, 68)') {
-            this.style.borderColor = '#e5e7eb';
+            this.style.borderColor = 'var(--border-color)';
         }
     });
 });
@@ -358,6 +462,21 @@ style.textContent = `
     .btn:disabled {
         opacity: 0.7;
         cursor: not-allowed;
+    }
+    
+    .notification-content {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    body:not(.loaded) {
+        opacity: 0;
+    }
+    
+    body.loaded {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
     }
 `;
 document.head.appendChild(style);
