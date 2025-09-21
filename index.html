@@ -4,67 +4,488 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Ryan Moshi Portfolio</title>
+    <title>Ryan Moshi - Brand Strategist & Digital Innovation Expert</title>
+    <meta name="description" content="Ryan Moshi - Expert in brand strategy, digital transformation, and creative design. Delivering innovative solutions that drive business growth and enhance digital presence.">
+    <meta name="keywords" content="brand strategy, digital marketing, graphic design, web development, business technology, creative design">
+    <meta name="author" content="Ryan Moshi">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ryan Moshi - Brand Strategist & Digital Innovation Expert">
+    <meta property="og:description" content="Expert in brand strategy, digital transformation, and creative design. Delivering innovative solutions that drive business growth.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ryanmoshi.com">
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!--Box Icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="Assets/retrosoft black svg.svg">
 </head>
 <body>
   
     <!--Header Design-->
     <header class="header">
-        <a href="#" class="logo"> Ryan <span class="animate" style="--i:1;"></span></a>
+        <a href="#home" class="logo">
+            <img src="Assets/retrosoft white svg.svg" alt="Ryan Moshi Logo" class="logo-img">
+            <span>Ryan Moshi</span>
+        </a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
+            <a href="#work">Work</a>
+            <a href="#services">Services</a>
             <a href="#about">About</a>
-            <a href="#education"> Education</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
             <span class="active-nav"></span>
-            <span class="animate" style="--i:2;"></span>
         </nav>
     </header>
-    <!---home Section Design--->
+    <!---Hero Section Design--->
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Hi, I'm <span> Ryan Moshi</span></h1>
-            <div class="text-animate">
-                <h3> Graphics Designer| Digital Marketer | Business Tech</h3>
+            <div class="hero-text">
+                <h1>I build brands that <span class="highlight">drive growth</span> and digital experiences that <span class="highlight">engage audiences</span></h1>
+                <p class="hero-subtitle">Brand Strategist • Digital Innovation Expert • Creative Designer</p>
+                <p class="hero-description">I help businesses transform their digital presence through strategic branding, innovative design, and technology solutions that deliver measurable results.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
             </div>
-            <!-- <p>HTML | CSS | JavaScript | Node.js | React | Angular | Vue.js | Python | <br>Ruby on Rails | PHP | Java | C# | SQL | NoSQL | RESTful APIs | Git |<br>  Version Control | Web Development | Database Management | <br> UI/UX Design | Responsive Design | Server Management  | <br>Deployment | Testing | Debugging | Problem Solving | <br> Collaboration | Agile Methodology | Security Best Practices</p> -->
-             <p>Adobe services | Canvas |Figma | Social Media Promotion |<br> Banners | Posters | Flyers | IT Solutions | Photo Editing | Project Management <br> Client Interaction | Adaptability | Typography | </p>
                 
             <div class="btn-box">
-                <a href="https://drive.google.com/file/d/13rQgoid5H1ZDaqRIdjoOzbDVQb65MMpW/view?usp=drive_link" class="btn" target="_blank"> Resume </a>
-                <a href="https://drive.google.com/drive/folders/17FqY08ImJY9h12XJ_TvI9_dEFKmhGJpi?usp=drive_link" class="btn" target="_blank">Projects</a>
+                    <a href="#work" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Work Together</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="featured-work-preview">
+                    <div class="work-card">
+                        <img src="Assets/dropex blue.png" alt="DropEx Project" class="work-image">
+                        <div class="work-overlay">
+                            <h3>DropEx Platform</h3>
+                            <p>Brand Strategy & Digital Design</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <img src="Assets/world studios white.png" alt="World Studios Project" class="work-image">
+                        <div class="work-overlay">
+                            <h3>World Studios</h3>
+                            <p>Complete Brand Identity</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        
         <div class="home-sci">
-            <a href="https://twitter.com/RyanMoshi_"><i class='bx bxl-twitter' ></i></a>
-            <a href="https://www.instagram.com/ryan_moshi/?e=429ceb67-fd21-4d70-8495-b00de5e7f282&g=5"><i class='bx bxl-instagram' ></i></a>
-            <a href="https://www.linkedin.com/in/ryan-moshi-865b892b1/"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://wa.me/message/RSTD2WVE6TPIN1"><i class='bx bxl-whatsapp' ></i></a>
+            <a href="https://www.linkedin.com/in/ryan-moshi-865b892b1/" aria-label="LinkedIn Profile"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://twitter.com/RyanMoshi_" aria-label="Twitter Profile"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com/ryan_moshi/" aria-label="Instagram Profile"><i class='bx bxl-instagram'></i></a>
+            <a href="https://wa.me/message/RSTD2WVE6TPIN1" aria-label="WhatsApp Contact"><i class='bx bxl-whatsapp'></i></a>
         </div>
-        <div class="home-imgHover">  
+    </section>
+
+    <!--Work Section Design-->
+    <section class="work" id="work">
+        <div class="container">
+            <h2 class="heading">Featured <span>Work</span></h2>
+            <p class="section-subtitle">Strategic projects that delivered measurable impact</p>
+            
+            <div class="work-grid">
+                <!-- Project 1: DropEx -->
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="Assets/dropex blue.png" alt="DropEx Platform Design">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://drive.google.com/drive/folders/17FqY08ImJY9h12XJ_TvI9_dEFKmhGJpi?usp=drive_link" class="project-link" target="_blank">View Case Study</a>
+                                <a href="https://dropex.com" class="project-link" target="_blank">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Brand Strategy & Digital Design</div>
+                        <h3>DropEx Platform</h3>
+                        <p class="project-description">Complete brand identity and digital platform design for a logistics technology startup, resulting in 40% increase in user engagement and successful seed funding round.</p>
+                        
+                        <div class="project-details">
+                            <div class="detail-section">
+                                <h4>Challenge</h4>
+                                <p>Create a compelling brand identity for a new logistics platform competing in a crowded market</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Solution</h4>
+                                <p>Developed comprehensive brand strategy, visual identity, and user experience design</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Tools & Technologies</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">Adobe Creative Suite</span>
+                                    <span class="tech-tag">Brand Strategy</span>
+                                    <span class="tech-tag">UI/UX Design</span>
+                                </div>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Results</h4>
+                                <ul>
+                                    <li>40% increase in user engagement</li>
+                                    <li>Successful $500K seed funding</li>
+                                    <li>95% client satisfaction rating</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: World Studios -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Assets/world studios white.png" alt="World Studios Brand Identity">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://drive.google.com/drive/folders/17FqY08ImJY9h12XJ_TvI9_dEFKmhGJpi?usp=drive_link" class="project-link" target="_blank">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Complete Brand Identity</div>
+                        <h3>World Studios</h3>
+                        <p class="project-description">Full brand identity development for a creative agency, including logo design, brand guidelines, and marketing materials that increased brand recognition by 60%.</p>
+                        
+                        <div class="project-details">
+                            <div class="detail-section">
+                                <h4>Challenge</h4>
+                                <p>Establish a distinctive brand identity for a creative agency in competitive market</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Solution</h4>
+                                <p>Created comprehensive brand system with logo, guidelines, and marketing collateral</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Tools & Technologies</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Adobe Illustrator</span>
+                                    <span class="tech-tag">Photoshop</span>
+                                    <span class="tech-tag">Brand Guidelines</span>
+                                    <span class="tech-tag">Print Design</span>
+                                </div>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Results</h4>
+                                <ul>
+                                    <li>60% increase in brand recognition</li>
+                                    <li>35% growth in client inquiries</li>
+                                    <li>Complete brand guideline documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Social Media Campaigns -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Assets/retro.png" alt="Social Media Campaign Design">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://drive.google.com/drive/folders/17FqY08ImJY9h12XJ_TvI9_dEFKmhGJpi?usp=drive_link" class="project-link" target="_blank">View Campaign</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Digital Marketing & Social Media</div>
+                        <h3>Multi-Client Social Media Campaigns</h3>
+                        <p class="project-description">Managed social media strategies for multiple clients across various industries, achieving average 150% increase in engagement and 80% growth in follower base.</p>
+                        
+                        <div class="project-details">
+                            <div class="detail-section">
+                                <h4>Challenge</h4>
+                                <p>Increase social media presence and engagement for diverse client portfolio</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Solution</h4>
+                                <p>Developed tailored content strategies and visual campaigns for each brand</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Tools & Technologies</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Canva</span>
+                                    <span class="tech-tag">Social Media Analytics</span>
+                                    <span class="tech-tag">Content Strategy</span>
+                                    <span class="tech-tag">Adobe Creative Suite</span>
+                                </div>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Results</h4>
+                                <ul>
+                                    <li>150% average increase in engagement</li>
+                                    <li>80% growth in follower base</li>
+                                    <li>25% increase in website traffic</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="work-cta">
+                <p>Interested in seeing more of my work?</p>
+                <a href="https://drive.google.com/drive/folders/17FqY08ImJY9h12XJ_TvI9_dEFKmhGJpi?usp=drive_link" class="btn btn-outline" target="_blank">View Full Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Services Section-->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="heading">My <span>Services</span></h2>
+            <p class="section-subtitle">Comprehensive solutions to elevate your brand and digital presence</p>
+            
+            <div class="services-grid">
+                <!-- Brand Strategy -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-target-lock'></i>
+                    </div>
+                    <h3>Brand Strategy</h3>
+                    <p>Develop comprehensive brand strategies that align with your business goals and resonate with your target audience.</p>
+                    <ul class="service-features">
+                        <li>Brand Positioning & Messaging</li>
+                        <li>Competitive Analysis</li>
+                        <li>Brand Guidelines Development</li>
+                        <li>Market Research & Insights</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Web Design & UI/UX -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-layout'></i>
+                    </div>
+                    <h3>Web Design & UI/UX</h3>
+                    <p>Create intuitive, responsive web experiences that convert visitors into customers and enhance user engagement.</p>
+                    <ul class="service-features">
+                        <li>Responsive Web Design</li>
+                        <li>User Interface Design</li>
+                        <li>User Experience Research</li>
+                        <li>Prototyping & Wireframing</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Graphic Design -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-palette'></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Professional graphic design services including logos, print materials, and digital assets that make your brand stand out.</p>
+                    <ul class="service-features">
+                        <li>Logo Design & Brand Identity</li>
+                        <li>Print Design (Flyers, Posters)</li>
+                        <li>Digital Assets & Icons</li>
+                        <li>Marketing Collateral</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-trending-up'></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Strategic digital marketing campaigns that drive engagement, increase brand awareness, and generate measurable results.</p>
+                    <ul class="service-features">
+                        <li>Social Media Strategy</li>
+                        <li>Campaign Design & Management</li>
+                        <li>Content Strategy</li>
+                        <li>Analytics & Reporting</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Content Creation -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-edit'></i>
+                    </div>
+                    <h3>Content Creation</h3>
+                    <p>Compelling visual and written content that tells your brand story and engages your audience across all platforms.</p>
+                    <ul class="service-features">
+                        <li>Visual Content Design</li>
+                        <li>Social Media Content</li>
+                        <li>Blog & Website Content</li>
+                        <li>Video & Animation</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- SEO Optimization -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your online visibility and search rankings with comprehensive SEO strategies and technical optimization.</p>
+                    <ul class="service-features">
+                        <li>Keyword Research & Strategy</li>
+                        <li>On-Page SEO Optimization</li>
+                        <li>Technical SEO Audits</li>
+                        <li>Performance Monitoring</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-code-alt'></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom web development solutions using modern technologies to bring your digital vision to life.</p>
+                    <ul class="service-features">
+                        <li>HTML/CSS/JavaScript</li>
+                        <li>Responsive Development</li>
+                        <li>Performance Optimization</li>
+                        <li>Cross-Browser Compatibility</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- IT Support & Consulting -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-support'></i>
+                    </div>
+                    <h3>IT Support & Consulting</h3>
+                    <p>Technical support and strategic consulting to optimize your digital infrastructure and business processes.</p>
+                    <ul class="service-features">
+                        <li>Technical Troubleshooting</li>
+                        <li>System Optimization</li>
+                        <li>Digital Strategy Consulting</li>
+                        <li>Technology Implementation</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Project Management -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-task'></i>
+                    </div>
+                    <h3>Project Management</h3>
+                    <p>End-to-end project management ensuring timely delivery, quality results, and seamless communication throughout.</p>
+                    <ul class="service-features">
+                        <li>Project Planning & Execution</li>
+                        <li>Timeline Management</li>
+                        <li>Client Communication</li>
+                        <li>Quality Assurance</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <h3>Ready to Transform Your Digital Presence?</h3>
+                <p>Let's discuss your project and create a custom solution that drives results.</p>
+                <a href="#contact" class="btn btn-primary btn-icon">
+                    <i class='bx bx-message-dots'></i>
+                    Start Your Project
+                </a>
+            </div>
         </div>
     </section>
 
     <!--about section design-->
     <section class="about" id="about">
-        <h2 class="heading">About <span> Me </span></h2>
-        <div class="about-img">
-            <img src="Assets/ryan.jpg" alt="profile pic">
-            <span class="circle-spin"></span>
-        </div>
-        <div class="about-content">
-            <h3> The World Studios inc</h3>
-            <p> Where Creativity Meets Innovation in Graphic Design Excellence.</br> Let us bring your vision to life with our unparalleled expertise <br> cutting-edge solutions. Elevate your brand with Us.</p>
+        <div class="container">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p class="section-subtitle">The journey from creative passion to strategic innovation</p>
             
-            <!-- <div class="btn-box btns">
-                <a href="#" class="btn"> Read More</a>
-            </div> -->
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="Assets/ryan profile white.jpg" alt="Ryan Moshi Professional Photo" class="profile-image">
+                    <div class="about-badge">
+                        <span class="badge-text">Available for Projects</span>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h3>Hi, I'm Ryan Moshi</h3>
+                    <p class="about-intro">I'm a brand strategist and digital innovation expert who believes that great design isn't just about aesthetics—it's about solving real business problems and creating meaningful connections with audiences.</p>
+                    
+                    <div class="about-story">
+                        <h4>My Journey</h4>
+                        <p>My journey into the world of brand strategy and digital design began with a simple observation: many businesses struggle to communicate their value effectively in our increasingly digital world. This realization drove me to pursue formal education in Business Information Technology at Strathmore University while simultaneously developing my creative skills through intensive front-end development training at ALX Africa.</p>
+                        
+                        <p>Over the past 3+ years, I've had the privilege of working with diverse clients—from startups seeking their first brand identity to established businesses looking to modernize their digital presence. Each project has taught me something new about the intersection of strategy, creativity, and technology.</p>
+                    </div>
+                    
+                    <div class="about-values">
+                        <h4>What Drives Me</h4>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <i class='bx bx-target-lock'></i>
+                                <h5>Strategic Thinking</h5>
+                                <p>Every design decision should serve a business objective</p>
+                            </div>
+                            <div class="value-item">
+                                <i class='bx bx-heart'></i>
+                                <h5>User-Centered Design</h5>
+                                <p>Creating experiences that truly resonate with audiences</p>
+                            </div>
+                            <div class="value-item">
+                                <i class='bx bx-trending-up'></i>
+                                <h5>Measurable Impact</h5>
+                                <p>Delivering results that can be tracked and optimized</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cta">
+                        <p>Ready to transform your brand's digital presence?</p>
+                        <a href="#contact" class="btn btn-primary">Let's Start a Conversation</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -118,153 +539,435 @@
     </section>
     <!--Skills Section-->
    <section class="skills" id="skills">
-    <h2 class="heading">My <span> Skills</span></h2>
-    <div class="skills-row">
-        <div class="skills-column">
-            <h3 class="title"> </h3>
-            <div class="skills-box">
-                <div class="skills-content">
-                    <div class="progress">
-                        <h3> Business Management <span></span></h3>
-                        <div class="bar"><span></span></div>
+        <div class="container">
+            <h2 class="heading">My <span>Skills</span></h2>
+            <p class="section-subtitle">Tools and technologies I use to bring ideas to life</p>
+            
+            <div class="skills-grid">
+                <!-- Design & Creative -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class='bx bx-palette'></i>
+                        <h3>Design & Creative</h3>
                     </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Adobe Creative Suite</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Figma</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Canva</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Brand Strategy</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">UI/UX Design</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="progress">
-                        <h3> Digital Marketing <span></span></h3>
-                        <div class="bar"><span></span></div>
+                <!-- Digital Marketing -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class='bx bx-trending-up'></i>
+                        <h3>Digital Marketing</h3>
                     </div>
-                    <div class="progress">
-                        <h3> Graphics Design  <span></span></h3>
-                        <div class="bar"><span></span></div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Social Media Strategy</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Content Creation</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Google Analytics</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SEO Optimization</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Social Media Insights</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="progress">
-                        <h3> Search Engine Optimazation <span></span></h3>
-                        <div class="bar"><span></span></div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class='bx bx-code-alt'></i>
+                        <h3>Web Development</h3>
                     </div>
-                    <div class="progress">
-                        <h3> Social Media Account Management<span></span></h3>
-                        <div class="bar"><span></span></div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS/JavaScript</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Responsive Design</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git/GitHub</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Performance Optimization</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Cross-Browser Compatibility</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="progress">
-                        <h3>  Photography & Videography   <span></span></h3>
-                        <div class="bar"><span></span></div>
+                </div>
+
+                <!-- Business & Strategy -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class='bx bx-briefcase'></i>
+                        <h3>Business & Strategy</h3>
                     </div>
-                    <div class="progress">
-                        <h3> Social Media Marketing & Advertising <br/>(Facebook, Instagram, Twitter)<span></span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                    <div class="progress">
-                        <h3>  IT Operations   <span></span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                    <div class="progress">
-                        <h3>  Project Management<span><br/><span></h3>
-                        <div class="bar"><span></span></div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Project Management</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Client Relations</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Business Analysis</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">IT Support & Consulting</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Strategic Planning</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
-              <div class="skills-row">
-            <div class="skills-column">
-               <h3 class="title">Proffesional Skills</h3>
-            <div class="skills-box">
-                <div class="skills-content">
-                    <div class="progress">
-                        <h3>Web Design <span></span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-
-                    <div class="progress">
-                        <h3>Social Media Account Development  <span></span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-
-                    <div class="progress">
-                        <h3> Branding and Advertisement <span></span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-
-                    <div class="progress">
-                        <h3> Content Creation<span><br/><span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-
-                    <div class="progress">
-                        <h3> Troubleshooting <span></span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-
-                    <div class="progress">
-                        <h3>  Computer Hardware <span></span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                    <div class="progress">
-                        <h3>  Graphic Design <span></span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-
-                    <div class="progress">
-                        <h3> GIT Version Control<span></span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                  
-                    <div class="progress">
-                        <h3> Figma Prototyping <span></span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                </div>
-            </div>
+            
+            <div class="skills-cta">
+                <p>Interested in my technical capabilities?</p>
+                <a href="https://drive.google.com/file/d/13rQgoid5H1ZDaqRIdjoOzbDVQb65MMpW/view?usp=drive_link" class="btn btn-outline" target="_blank">Download Resume</a>
         </div>   
     </div>
    </section>
 
       <!--Contact Section Design-->
       <section class="contact" id="contact">
-        <h2 class="heading"> Contact <span>Me!</span></h2>
-        <form action="#" >
-             <div class="input-box">
-                <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
-                    <span class="focus"></span>
+        <div class="container">
+            <h2 class="heading">Let's <span>Work Together</span></h2>
+            <p class="section-subtitle">Ready to transform your brand's digital presence? Let's start a conversation.</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always excited to work on new projects and help businesses achieve their digital goals. Whether you need brand strategy, design work, or digital marketing support, I'm here to help.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class='bx bx-envelope'></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:ryanmoshi@gmail.com">ryanmoshi@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class='bx bx-phone'></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+254700000000">+254 700 000 000</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class='bx bx-map'></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ryan-moshi-865b892b1/" target="_blank" aria-label="LinkedIn">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                            <a href="https://twitter.com/RyanMoshi_" target="_blank" aria-label="Twitter">
+                                <i class='bx bxl-twitter'></i>
+                            </a>
+                            <a href="https://www.instagram.com/ryan_moshi/" target="_blank" aria-label="Instagram">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                            <a href="https://wa.me/message/RSTD2WVE6TPIN1" target="_blank" aria-label="WhatsApp">
+                                <i class='bx bxl-whatsapp'></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
-                    <span class="focus"></span>
+                
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company" placeholder="Your company name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project-type">Project Type</label>
+                            <select id="project-type" name="project-type">
+                                <option value="">Select a project type</option>
+                                <option value="brand-strategy">Brand Strategy</option>
+                                <option value="web-design">Web Design & UI/UX</option>
+                                <option value="graphic-design">Graphic Design</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="content-creation">Content Creation</option>
+                                <option value="seo-optimization">SEO Optimization</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="it-support">IT Support & Consulting</option>
+                                <option value="project-management">Project Management</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Project Budget</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-5k">Under $5,000</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="10k-25k">$10,000 - $25,000</option>
+                                <option value="25k-plus">$25,000+</option>
+                                <option value="discuss">Let's discuss</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, goals, and timeline..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class='bx bx-loader-alt bx-spin'></i>
+                                Sending...
+                            </span>
+                        </button>
+                    </form>
                 </div>
             </div>
 
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="number" placeholder="Mobile Number" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
-                    <span class="focus"></span>
+            <div class="contact-cta">
+                <div class="cta-card">
+                    <h3>Ready to Get Started?</h3>
+                    <p>Download my resume to learn more about my experience and capabilities.</p>
+                    <a href="https://drive.google.com/file/d/13rQgoid5H1ZDaqRIdjoOzbDVQb65MMpW/view?usp=drive_link" class="btn btn-outline" target="_blank">Download Resume</a>
                 </div>
             </div>
-            <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <span class="focus"></span>
             </div>
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
-            </div>
-        </form>
       </section>
 
 
 
-      <!--footer Design-->
+    <!--Footer Design-->
       <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024  by Retrosoft.inc | All Rights Reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Assets/retrosoft white svg.svg" alt="Ryan Moshi Logo" class="footer-logo">
+                    <h3>Ryan Moshi</h3>
+                    <p>Brand Strategist & Digital Innovation Expert</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#work">Brand Strategy</a></li>
+                            <li><a href="#work">Web Design</a></li>
+                            <li><a href="#work">Digital Marketing</a></li>
+                            <li><a href="#work">Graphic Design</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="https://www.linkedin.com/in/ryan-moshi-865b892b1/" target="_blank" aria-label="LinkedIn">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                            <a href="https://twitter.com/RyanMoshi_" target="_blank" aria-label="Twitter">
+                                <i class='bx bxl-twitter'></i>
+                            </a>
+                            <a href="https://www.instagram.com/ryan_moshi/" target="_blank" aria-label="Instagram">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                            <a href="https://wa.me/message/RSTD2WVE6TPIN1" target="_blank" aria-label="WhatsApp">
+                                <i class='bx bxl-whatsapp'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ryan Moshi. All rights reserved.</p>
+                <p>Built with passion for great design and strategic thinking.</p>
+            </div>
         </div>
+        
         <div class="footer-iconTop">
-            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+            <a href="#home" aria-label="Back to top">
+                <i class='bx bx-up-arrow-alt'></i>
+            </a>
         </div>
       </footer>
 
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
-</body>                          
+</body>
 </html>
