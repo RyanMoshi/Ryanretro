@@ -2,7 +2,8 @@
 
 // Initialize EmailJS
 (function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    // TODO: Replace with your EmailJS public key
+    emailjs.init("YOUR_PUBLIC_KEY");
 })();
 
 // Dark Mode Toggle
@@ -41,6 +42,52 @@ function updateThemeIcon(theme) {
 // Enhanced Page Load Animation
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
+    // Loader typing effect
+    const loader = document.getElementById('loader');
+    const typeEl = document.getElementById('loader-type');
+    const subtypeEl = document.getElementById('loader-subtype');
+    const bar = document.getElementById('loader-progress-bar');
+
+    const lines = [
+        'Ryan Moshi',
+        'Brand Strategist & Chief Technologist'
+    ];
+
+    function typeText(element, text, speed = 70) {
+        return new Promise(resolve => {
+            element.textContent = '';
+            let i = 0;
+            const timer = setInterval(() => {
+                element.textContent += text.charAt(i);
+                i++;
+                if (bar) bar.style.width = Math.min(100, (i / Math.max(text.length, 1)) * 100) + '%';
+                if (i >= text.length) { clearInterval(timer); resolve(); }
+            }, speed);
+        });
+    }
+
+    async function runLoader() {
+        if (!loader || !typeEl || !subtypeEl) return;
+        await typeText(typeEl, lines[0], 65);
+        await new Promise(r => setTimeout(r, 300));
+        await typeText(subtypeEl, lines[1], 45);
+        await new Promise(r => setTimeout(r, 400));
+        loader.classList.add('hidden');
+        setTimeout(() => loader.setAttribute('aria-hidden', 'true'), 300);
+    }
+
+    runLoader();
+    
+    // Apply compact hero on very small screens
+    const applyCompact = () => {
+        if (window.innerWidth <= 480) {
+            document.body.classList.add('compact-hero');
+        } else {
+            document.body.classList.remove('compact-hero');
+        }
+    };
+    applyCompact();
+    window.addEventListener('resize', applyCompact);
     
     // Animate hero elements with delays
     const heroElements = document.querySelectorAll('.hero-text > *');
@@ -139,10 +186,12 @@ function animateCounter(element, target, duration = 2000) {
     
     const timer = setInterval(() => {
         start += increment;
-        element.textContent = Math.floor(start);
+        const suffix = element.dataset.suffix || '';
+        const prefix = element.dataset.prefix || '';
+        element.textContent = `${prefix}${Math.floor(start)}${suffix}`;
         
         if (start >= target) {
-            element.textContent = target;
+            element.textContent = `${prefix}${target}${suffix}`;
             clearInterval(timer);
         }
     }, 16);
@@ -208,22 +257,44 @@ if (contactForm) {
         try {
             // Get form data
             const formData = new FormData(contactForm);
+            const userEmail = formData.get('email');
             const templateParams = {
                 from_name: formData.get('name'),
-                from_email: formData.get('email'),
-                company: formData.get('company'),
-                project_type: formData.get('project-type'),
-                budget: formData.get('budget'),
+                from_email: userEmail,
+                company: formData.get('company') || 'N/A',
+                project_type: formData.get('project-type') || 'N/A',
+                budget: formData.get('budget') || 'N/A',
                 message: formData.get('message'),
-                to_email: 'ryanmoshi@gmail.com'
+                to_email: 'ryanemmanuelmoshi@gmail.com'
             };
             
-            // Send email using EmailJS
+            // Send email to Ryan
             const response = await emailjs.send(
                 'YOUR_SERVICE_ID',
-                'YOUR_TEMPLATE_ID',
+                'YOUR_TEMPLATE_ID_CONTACT_TO_RYAN',
                 templateParams
             );
+
+            // Send appreciation email to user
+            try {
+                await emailjs.send(
+                    'YOUR_SERVICE_ID',
+                    'YOUR_TEMPLATE_ID_APPRECIATION_TO_USER',
+                    {
+                        user_email: userEmail,
+                        user_name: formData.get('name'),
+                        cv_link: 'https://342646301392609280.hello.cv',
+                        tel_link: 'tel:+254790310699',
+                        email_link: 'mailto:ryanemmanuelmoshi@gmail.com',
+                        // Logo URLs: using site absolute URLs; replace with CDN if available
+                        worldstudios_logo_url: new URL('Assets/world studios white.png', window.location.origin).href,
+                        dropx_logo_url: new URL('Assets/dropex blue.png', window.location.origin).href,
+                        retrosoft_logo_url: new URL('Assets/retrosoft white svg.svg', window.location.origin).href
+                    }
+                );
+            } catch (appErr) {
+                console.warn('Appreciation email failed:', appErr);
+            }
             
             if (response.status === 200) {
                 showNotification('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
